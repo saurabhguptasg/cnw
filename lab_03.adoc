@@ -1,5 +1,5 @@
 :compat-mode:
-= Lab 3 - Creating a guestbook application that persist data.
+= Lab 3 - Creating a guestbook application that persists data.
 
 In this lab we're going to build a Guestbook application that allows the user to enter information in the U/I.
 The resulting application looks like the following screenshot:
