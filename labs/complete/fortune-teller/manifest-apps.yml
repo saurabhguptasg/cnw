@@ -2,22 +2,19 @@
 memory: 512M
 instances: 1
 buildpack: java_buildpack_offline
+env:
+  CF_TARGET: https://api.run.haas-76.pez.pivotal.io
 applications:
 - name: fortune-service
-  host: fortunes-fernys
+  host: fortunes-sg
   path: fortune-teller-fortune-service/target/fortune-teller-fortune-service-0.0.1-SNAPSHOT.jar
   services:
-  - fortune-db
   - config-server
   - service-registry
-  env:
-    CF_TARGET: https://api.system.pcfaws.jagapps.co
 - name: fortune-ui
-  host: fortunes-ui-fernys
+  host: fortunes-ui-sg
   path: fortune-teller-ui/target/fortune-teller-ui-0.0.1-SNAPSHOT.jar
   services:
   - config-server
   - service-registry
   - circuit-breaker
-  env:
-    CF_TARGET: https://api.system.pcfaws.jagapps.co

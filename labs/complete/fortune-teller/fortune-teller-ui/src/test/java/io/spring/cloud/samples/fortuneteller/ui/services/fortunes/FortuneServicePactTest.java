@@ -38,16 +38,16 @@ public class FortuneServicePactTest {
         headers.put("Content-Type", "application/json;charset=UTF-8");
 
         PactDslJsonBody responseBody = new PactDslJsonBody()
-                .numberType("id")
-                .stringType("text");
+            .numberType("id")
+            .stringType("text");
 
         return builder.uponReceiving("a request for a random fortune")
-                .path("/random")
-                .method("GET")
-                .willRespondWith()
-                .headers(headers)
-                .status(200)
-                .body(responseBody).toFragment();
+                      .path("/random")
+                      .method("GET")
+                      .willRespondWith()
+                      .headers(headers)
+                      .status(200)
+                      .body(responseBody).toFragment();
     }
 
     @Test

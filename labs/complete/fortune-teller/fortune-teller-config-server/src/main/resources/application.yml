@@ -6,6 +6,6 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/saurabhguptasg/cnw-config-repo.git
+          uri: https://github.com/saurabhguptasg/cnw-config-repo
           
           

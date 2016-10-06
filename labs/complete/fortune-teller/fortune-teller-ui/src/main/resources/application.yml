@@ -1,16 +1,16 @@
 server:
   port: 8081
 
-eureka:
-  client:
-    registryFetchIntervalSeconds: 5
+#eureka:
+#  client:
+#    registryFetchIntervalSeconds: 5
 
 ribbon:
   IsSecure: false
 
-fortunes:
-  ribbon:
-    ServerListRefreshInterval: 5000
+#fortunes:
+#  ribbon:
+#    ServerListRefreshInterval: 5000
 
 security:
   basic:

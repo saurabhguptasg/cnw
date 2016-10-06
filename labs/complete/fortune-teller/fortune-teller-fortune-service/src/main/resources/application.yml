@@ -21,9 +21,13 @@ spring:
   jpa:
     database: HSQL
 
+security:
+  basic:
+    enabled: false
+
 ---
 
 spring:
   profiles: cloud
   jpa:
-    database: MYSQL
+    database: HSQL
