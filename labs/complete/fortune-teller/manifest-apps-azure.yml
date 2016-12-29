@@ -1,22 +1,20 @@
 ---
-memory: 512M
+memory: 1024M
 instances: 1
+buildpack: java_buildpack_offline
+env:
+  CF_TARGET: https://api.pcfazure.com
 applications:
 - name: fortune-service
-  host: fortunes-${random-word}
+  host: fortunes-sg
   path: fortune-teller-fortune-service/target/fortune-teller-fortune-service-0.0.1-SNAPSHOT.jar
   services:
-  - fortune-db
   - config-server
   - service-registry
-  env:
-    CF_TARGET: https://api.pcf4.cloud.fe.pivotal.io
 - name: fortune-ui
-  host: fortunes-ui-${random-word}
+  host: fortunes-ui-sg
   path: fortune-teller-ui/target/fortune-teller-ui-0.0.1-SNAPSHOT.jar
   services:
   - config-server
   - service-registry
-  - circuit-breaker
-  env:
-    CF_TARGET: https://api.pcf4.cloud.fe.pivotal.io
+  - circuit-breaker-dashboard

@@ -1,0 +1,11 @@
+---
+applications:
+- name: bootdemo
+  memory: 512M 
+  instances: 1
+  host: bootdemo-sg
+  buildpack: java_buildpack_offline
+  path: ./target/demo-0.0.1-SNAPSHOT.jar
+  env:
+    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
+

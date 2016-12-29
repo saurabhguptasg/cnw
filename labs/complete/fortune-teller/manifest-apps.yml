@@ -1,5 +1,5 @@
 ---
-memory: 512M
+memory: 1024M
 instances: 1
 buildpack: java_buildpack_offline
 env:
@@ -17,4 +17,4 @@ applications:
   services:
   - config-server
   - service-registry
-  - circuit-breaker
+  - circuit-breaker-dashboard

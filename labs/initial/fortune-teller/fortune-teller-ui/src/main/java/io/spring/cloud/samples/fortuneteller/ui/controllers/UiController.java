@@ -1,0 +1,28 @@
+package io.spring.cloud.samples.fortuneteller.ui.controllers;
+
+import io.spring.cloud.samples.fortuneteller.ui.service.fortunes.Fortune;
+import io.spring.cloud.samples.fortuneteller.ui.service.fortunes.FortuneService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * @author sgupta
+ * @since 1/10/16.
+ */
+@RestController
+public class UiController {
+
+  @Autowired
+  FortuneService service;
+
+  @RequestMapping("/random")
+  public Fortune randomFortune() {
+    return service.randomFortune();
+  }
+
+  @RequestMapping("/random-config")
+  public Fortune randomConfigFortune() {
+    return service.randomRemoteFortune();
+  }
+}
